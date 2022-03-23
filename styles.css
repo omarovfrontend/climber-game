@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Verdana, sans-serif;
+  font-size: 20px;
+  background-color: #3a3434;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.climbing_title {
+  text-align: center;
+  font-style: italic;
+  color: #c4bcbc;
+  font-size: 30px;
+  border-radius: 15px 15px 3px 3px;
+}
+
+.wrapper {
+  position: relative;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1280px;
+}
+
+.win-img {
+  position: absolute;
+  top: -60px;
+  right: 290px;
+  width: 70px;
+  z-index: 100;
+  opacity: 0;
+}
+
+img.mountains-img {
+  width: 100%;
+}
+
+.climber-img {
+  position: absolute;
+  width: 50px;
+  bottom: 20px;
+  left: 130px;
+  z-index: 10;
+}
+
+.climbing-point {
+  position: relative;
+  background-color: #f20707;
+  width: 50px;
+  height: 3px;
+}
+
+.point-1 {
+  bottom: 80px;
+  left: 155px;
+}
+
+.point-2 {
+  bottom: 240px;
+  left: 310px;
+}
+
+.point-3 {
+  bottom: 310px;
+  left: 555px;
+}
+
+.point-4 {
+  bottom: 200px;
+  left: 695px;
+}
+
+.point-5 {
+  bottom: 100px;
+  left: 800px;
+}
+
+.point-6 {
+  bottom: 240px;
+  left: 850px;
+}
+
+.point-7 {
+  bottom: 380px;
+  left: 925px;
+}
+
+.climbing_control {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.climbing_control-title {
+  color: #928c8c;
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.climbing_control-z,
+.climbing_control-x {
+  padding: 5px 5px;
+  background-color: #7a7c7c;
+  text-transform: uppercase;
+}
+
+.climbing_control-z {
+  margin-right: 10px;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://naked-science.ru/wp-content/uploads/2017/03/field_image_nochnoe-nebo-3840x2400-zemlya-nebo-sneg-zvezdi-noch-more-visota-425-min.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: animateBg 50s linear infinite;
+  z-index: -10;
+}
+
+@keyframes animateBg {
+  0%,100%
+  {
+    transform: scale(1);
+  }
+  50%
+  {
+    transform: scale(1.2);
+  }
+}
+
+span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate .5s linear infinite;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .1),
+              0 0 0 8px rgba(255, 255, 255, .1),
+              0 0 20px rgba(255, 255, 255, 1);
+}
+
+span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg,#fff,transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(-45deg) translateX(0);
+  }
+  70% {
+    opacity: 1;
+  } 100% {
+    transform: rotate(-45deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+span:nth-child(1) {
+  top: 0px;
+  right: 0px;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+
+span:nth-child(2) {
+  top: 0px;
+  right: 80px;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+
+span:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+
+span:nth-child(4) {
+  top: 0px;
+  right: 180px;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+
+span:nth-child(5) {
+  top: 0px;
+  right: 400px;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+
+span:nth-child(6) {
+  top: 0px;
+  right: 600px;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+
+span:nth-child(7) {
+  top: 300px;
+  right: 0px;
+  animation-delay: 1.2s;
+  animation-duration: 1.75s;
+}
+
+span:nth-child(8) {
+  top: 0px;
+  right: 700px;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+
+span:nth-child(9) {
+  top: 0px;
+  right: 1000px;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+
+span:nth-child(10) {
+  top: 0px;
+  right: 450px;
+  animation-delay: 2.75s;
+  animation-duration: 2.25s;
+}
