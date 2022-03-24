@@ -140,8 +140,8 @@ section {
 }
 
 @keyframes animateBg {
-  0%,100%
-  {
+  0%,
+  100% {
     transform: scale(1);
   }
   50%
@@ -160,6 +160,7 @@ span {
   box-shadow: 0 0 0 4px rgba(255, 255, 255, .1),
               0 0 0 8px rgba(255, 255, 255, .1),
               0 0 20px rgba(255, 255, 255, 1);
+  display: none;
 }
 
 span:before {
